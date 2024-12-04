@@ -86,13 +86,13 @@ async def menu(messages: asyncio.Queue, page: ft.Page):
 
     clock_task = asyncio.create_task(clock(), name="clock")
 
-    async def window_event_handler(event: ft.ControlEvent):
-        if event.data == "close":
+    async def window_event_handler(event: ft.WindowEvent):
+        if event.type == ft.WindowEventType.CLOSE:
             clock_task.cancel()
             await page.window_destroy_async()
 
     page.window_prevent_close = True
-    page.on_window_event = window_event_handler
+    page.window.on_event = window_event_handler
 
     await page.update_async()
 

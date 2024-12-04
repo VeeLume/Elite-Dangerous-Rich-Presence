@@ -137,7 +137,7 @@ class GeneralOptions(ft.UserControl):
                             alignment=ft.MainAxisAlignment.SPACE_AROUND,
                             controls=[
                                 ft.Switch(
-                                    label="Autostart to Tray",
+                                    label="Start to Tray",
                                     value=settings.general.auto_tray,
                                     on_change=self.set_autotray,
                                 ),

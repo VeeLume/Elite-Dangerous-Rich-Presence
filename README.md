@@ -21,7 +21,7 @@
 <!-- PROJECT LOGO -->
 <!-- <br />
 <div align="center">
-  <a href="https://github.com/Lasa2/Elite-Dangerous-Rich-Presence">
+  <a href="https://github.com/VeeLume/Elite-Dangerous-Rich-Presence">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 -->
@@ -31,12 +31,12 @@
   <p align="center">
     A standalone Discord Rich Presence application which hides in the System Tray.
     <br />
-    <a href="https://github.com/Lasa2/Elite-Dangerous-Rich-Presence/blob/master/README.md"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/VeeLume/Elite-Dangerous-Rich-Presence/blob/master/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Lasa2/Elite-Dangerous-Rich-Presence/issues">Report Bug</a>
+    <a href="https://github.com/VeeLume/Elite-Dangerous-Rich-Presence/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Lasa2/Elite-Dangerous-Rich-Presence/issues">Request Feature</a>
+    <a href="https://github.com/VeeLume/Elite-Dangerous-Rich-Presence/issues">Request Feature</a>
   </p>
 </div>
 
@@ -73,8 +73,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <p align="middle">
-  <img src="https://github.com/Lasa2/Elite-Dangerous-Rich-Presence/blob/master/images/presence.jpg?raw=true">
-  <img src="https://github.com/Lasa2/Elite-Dangerous-Rich-Presence/blob/master/images/settings.png?raw=true" height=600px>
+  <img src="https://github.com/VeeLume/Elite-Dangerous-Rich-Presence/blob/master/images/presence.jpg?raw=true">
+  <img src="https://github.com/VeeLume/Elite-Dangerous-Rich-Presence/blob/master/images/settings.png?raw=true" height=600px>
 </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -99,25 +99,10 @@ If you want to modify and build your own app, then follow the installation and u
 
 ### Prerequisites
 
-* [poetry](https://python-poetry.org/docs/#installation)
+* [uv](https://docs.astral.sh/uv/#getting-started)
   ```powershell
-  (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
+  powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
   ```
-
-### Installation
-
-1. Clone the repo
-   ```powershell
-   git clone https://github.com/Lasa2/Elite-Dangerous-Rich-Presence.git
-   ```
-2. Enter directory
-   ```powershell
-   Set-Location Elite-Dangerous-Rich-Presence
-   ```
-3. Install python packages with poetry
-   ```powershell
-   poetry install
-   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,7 +115,7 @@ If you want to modify and build your own app, then follow the installation and u
 
 To run the app without building an executable:
 ```powershell
-poetry run python -m elite_dangerous_rich_presence
+uv run python -m elite_dangerous_rich_presence
 ```
 To build the executable:
 ```powershell
@@ -146,9 +131,9 @@ To build the executable:
 <!-- ROADMAP -->
 ## Roadmap
 
-There are currently no features planned, if you have a feature that is missing please [open an issue](https://github.com/Lasa2/Elite-Dangerous-Rich-Presence/issues)
+There are currently no features planned, if you have a feature that is missing please [open an issue](https://github.com/VeeLume/Elite-Dangerous-Rich-Presence/issues)
 
-See the [open issues](https://github.com/Lasa2/Elite-Dangerous-Rich-Presence/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/VeeLume/Elite-Dangerous-Rich-Presence/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,7 +169,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/Lasa2/Elite-Dangerous-Rich-Presence](https://github.com/Lasa2/Elite-Dangerous-Rich-Presence)
+Project Link: [https://github.com/VeeLume/Elite-Dangerous-Rich-Presence](https://github.com/VeeLume/Elite-Dangerous-Rich-Presence)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,16 +187,16 @@ Project Link: [https://github.com/Lasa2/Elite-Dangerous-Rich-Presence](https://g
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Lasa2/Elite-Dangerous-Rich-Presence.svg?style=for-the-badge
-[contributors-url]: https://github.com/Lasa2/Elite-Dangerous-Rich-Presence/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Lasa2/Elite-Dangerous-Rich-Presence.svg?style=for-the-badge
-[forks-url]: https://github.com/Lasa2/Elite-Dangerous-Rich-Presence/network/members
-[stars-shield]: https://img.shields.io/github/stars/Lasa2/Elite-Dangerous-Rich-Presence.svg?style=for-the-badge
-[stars-url]: https://github.com/Lasa2/Elite-Dangerous-Rich-Presence/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Lasa2/Elite-Dangerous-Rich-Presence.svg?style=for-the-badge
-[issues-url]: https://github.com/Lasa2/Elite-Dangerous-Rich-Presence/issues
-[license-shield]: https://img.shields.io/github/license/Lasa2/Elite-Dangerous-Rich-Presence.svg?style=for-the-badge
-[license-url]: https://github.com/Lasa2/Elite-Dangerous-Rich-Presence/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/VeeLume/Elite-Dangerous-Rich-Presence.svg?style=for-the-badge
+[contributors-url]: https://github.com/VeeLume/Elite-Dangerous-Rich-Presence/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/VeeLume/Elite-Dangerous-Rich-Presence.svg?style=for-the-badge
+[forks-url]: https://github.com/VeeLume/Elite-Dangerous-Rich-Presence/network/members
+[stars-shield]: https://img.shields.io/github/stars/VeeLume/Elite-Dangerous-Rich-Presence.svg?style=for-the-badge
+[stars-url]: https://github.com/VeeLume/Elite-Dangerous-Rich-Presence/stargazers
+[issues-shield]: https://img.shields.io/github/issues/VeeLume/Elite-Dangerous-Rich-Presence.svg?style=for-the-badge
+[issues-url]: https://github.com/VeeLume/Elite-Dangerous-Rich-Presence/issues
+[license-shield]: https://img.shields.io/github/license/VeeLume/Elite-Dangerous-Rich-Presence.svg?style=for-the-badge
+[license-url]: https://github.com/VeeLume/Elite-Dangerous-Rich-Presence/blob/master/LICENSE
 [product-screenshot]: images/screenshot.png
 [pypresence]: https://img.shields.io/badge/pypresence-00bb88.svg?style=for-the-badge&logo=discord&logoWidth=20
 [pypresence-url]: https://github.com/qwertyquerty/pypresence
