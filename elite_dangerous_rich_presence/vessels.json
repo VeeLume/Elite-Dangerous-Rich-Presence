@@ -39,7 +39,8 @@
         "anaconda": "Anaconda",
         "federation_corvette": "Federal Corvette",
         "cutter": "Imperial Cutter",
-        "adder_taxi": "Taxi"
+        "adder_taxi": "Taxi",
+        "cobramkv": "Cobra Mk V"
     },
     "SUITS": {
         "utilitysuit_class1": "Maverick Suit",
