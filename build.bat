@@ -1,1 +1,1 @@
-poetry run flet pack  .\elite_dangerous_rich_presence\__main__.py --onedir --name "Elite Dangerous Rich Presence" --add-data "elite-dangerous-clean.ico;." --icon elite-dangerous-clean.ico --hidden-import win32timezone
+uv run flet pack  .\elite_dangerous_rich_presence\__main__.py --onedir --name "Elite Dangerous Rich Presence" --add-data "elite-dangerous-clean.ico;." --icon elite-dangerous-clean.ico --hidden-import win32timezone

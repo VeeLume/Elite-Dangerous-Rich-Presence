@@ -10,7 +10,7 @@ dependencies = [
     "pywin32>=307",
     "httpx>=0.27.2",
     "pydantic-settings>=2.5.2",
-    "flet>=0.24.1",
+    "flet[all]>=0.22.0,<=0.23.0",
 ]
 
 [build-system]
