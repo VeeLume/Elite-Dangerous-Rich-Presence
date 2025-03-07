@@ -7,3 +7,5 @@ LATEST_RELEASE_URL = (
 API_LATEST_RELEASE_URL = (
     "https://api.github.com/repos/VeeLume/Elite-Dangerous-Rich-Presence/releases/latest"
 )
+
+VESSELS_URL = "https://raw.githubusercontent.com/VeeLume/Elite-Dangerous-Rich-Presence/refs/heads/master/elite_dangerous_rich_presence/vessels.json"

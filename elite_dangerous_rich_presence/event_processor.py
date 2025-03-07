@@ -4,12 +4,12 @@ from typing import Any
 import httpx
 from loguru import logger
 
+from elite_dangerous_rich_presence import VESSELS_URL
 from elite_dangerous_rich_presence.settings_config import settings
 from elite_dangerous_rich_presence.util import iso_to_unix
 
-url = "https://raw.githubusercontent.com/VeeLume/Elite-Dangerous-Rich-Presence/main/elite_dangerous_rich_presence/vessels.json"
 try:
-    response = httpx.get(url)
+    response = httpx.get(VESSELS_URL)
     response.raise_for_status()
     data = response.json()
     SHIPS = data["SHIPS"]
