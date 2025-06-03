@@ -22,6 +22,7 @@ def launcher_active():
     return bool(
         win32gui.FindWindow(None, "Elite Dangerous Launcher")
         or win32gui.FindWindow(None, "elite-launcher")
+        or win32gui.FindWindow(None, "elite launcher")
     )
 
 
