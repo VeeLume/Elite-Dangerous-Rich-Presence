@@ -10,6 +10,11 @@ import win32gui
 import winerror
 from loguru import logger
 
+def resource_path(relative_path):
+    #absolute path
+    if hasattr(sys, '_MEIPASS'):
+        return Path(sys._MEIPASS) / relative_path
+    return Path(relative_path)
 
 class TaskbarApp:
     # https://github.com/mhammond/pywin32/blob/master/win32/Demos/win32gui_taskbar.py
@@ -26,7 +31,7 @@ class TaskbarApp:
             icon_path=icon_path,
         )
         self.title = title
-        self.icon_path = str(icon_path)
+        self.icon_path = str(resource_path(icon_path if icon_path else "elite-dangerous-clean.ico"))
         self.callback = callback
 
         msg_taskbar_restart = win32gui.RegisterWindowMessage("TaskbarCreated")
@@ -67,14 +72,45 @@ class TaskbarApp:
             handle_instance,
             None,
         )
+
+        icon_path = Path(self.icon_path)
+        if not icon_path.is_file():
+            logger.error(f"Icon file not found: {icon_path.resolve()}")
+            hicon = win32gui.LoadIcon(0, win32con.IDI_APPLICATION)
+        else:
+            icon_flags = win32con.LR_LOADFROMFILE | win32con.LR_DEFAULTSIZE
+            hicon = win32gui.LoadImage(
+                win32api.GetModuleHandle(None),
+                str(icon_path),
+                win32con.IMAGE_ICON,
+                0,
+                0,
+                icon_flags,
+            )
+
         win32gui.UpdateWindow(self.hwnd)
+        win32gui.SendMessage(self.hwnd, win32con.WM_SETICON, win32con.ICON_SMALL, hicon)
+        win32gui.SendMessage(self.hwnd, win32con.WM_SETICON, win32con.ICON_BIG, hicon)
         self._create_icons()
 
     def _create_icons(self):
         # Try and find a custom icon
         handle_instance = win32api.GetModuleHandle(None)
         exe_path = Path(sys.executable).parent
-        icon_path = self.icon_path
+        icon_path = Path(self.icon_path)
+        if not icon_path.is_file():
+            logger.error(f"Icon file not found: {icon_path.resolve()}")
+            self.hicon = win32gui.LoadIcon(0, win32con.IDI_APPLICATION)
+        else:
+            icon_flags = win32con.LR_LOADFROMFILE | win32con.LR_DEFAULTSIZE
+            self.hicon = win32gui.LoadImage(
+                win32api.GetModuleHandle(None),
+                str(icon_path),
+                win32con.IMAGE_ICON,
+                0,
+                0,
+                icon_flags,
+            )
 
         if not icon_path:
             icon_path = exe_path / "pyc.ico"
