@@ -1,6 +1,6 @@
 [project]
 name = "elite-dangerous-rich-presence"
-version = "5.7"
+version = "5.9"
 description = "A standalone Discord Rich Presence application which hides in the System Tray."
 readme = "README.md"
 requires-python = ">=3.12"
