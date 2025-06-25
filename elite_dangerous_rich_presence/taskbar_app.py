@@ -10,6 +10,8 @@ import win32gui
 import winerror
 from loguru import logger
 
+# This module needs some cleanup, but it works for now.
+
 def resource_path(relative_path):
     #absolute path
     if hasattr(sys, '_MEIPASS'):
