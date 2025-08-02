@@ -43,7 +43,8 @@
         "cobramkv": "Cobra Mk V",
         "type8": "Type-8 Transporter",
         "panthermkii": "Panther Clipper Mk II",
-        "corsair": "Corsair"
+        "corsair": "Corsair",
+        "mandalay": "Mandalay"
     },
     "SUITS": {
         "utilitysuit_class1": "Maverick Suit",
