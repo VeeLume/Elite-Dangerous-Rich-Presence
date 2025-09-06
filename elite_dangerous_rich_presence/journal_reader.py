@@ -36,10 +36,14 @@ def any_active():
 
 def get_creation_time():
     logger.debug("Getting creation time of Elite Game")
-    hwnd = win32gui.FindWindow(None, "Elite - Dangerous (CLIENT)")
-    _, process_id = win32process.GetWindowThreadProcessId(hwnd)
-    process_handle = win32api.OpenProcess(5120, False, process_id)
-    process_times = win32process.GetProcessTimes(process_handle)
+    try:
+        hwnd = win32gui.FindWindow(None, "Elite - Dangerous (CLIENT)")
+        _, process_id = win32process.GetWindowThreadProcessId(hwnd)
+        process_handle = win32api.OpenProcess(0x1000, False, process_id)
+        process_times = win32process.GetProcessTimes(process_handle)
+    except Exception as e:
+        logger.error("Error getting process times: {error}", error=e)
+        return datetime(1, 1, 1, 1, 1, 1, tzinfo=local_timezone())
 
     logger.debug("Creation time of Elite Game: {time}", time=process_times)
     return process_times["CreationTime"]

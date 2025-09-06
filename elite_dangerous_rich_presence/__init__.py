@@ -1,5 +1,5 @@
-__version__ = "5.9"
-__version_info__ = (5, 9)
+__version__ = "5.10"
+__version_info__ = (5, 10)
 
 LATEST_RELEASE_URL = (
     "https://github.com/VeeLume/Elite-Dangerous-Rich-Presence/releases/latest"
